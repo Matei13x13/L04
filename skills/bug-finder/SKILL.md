@@ -17,7 +17,7 @@ How to work:
 Rules:
 - Report only real bugs: the code returns a wrong result for some input. Do not report style, names, missing type hints, missing input checks or speed.
 - At most one report per function. If a function is correct, write nothing about it.
-- Line is the number of the line with the wrong code (usually the return line), not the def line and not the docstring line.
+- Line is the number written at the start of the line that contains the wrong code, the line that the Fix replaces (usually the return line). It is never the def line and never the docstring line (the line with """). Check the number again before you write it: the Fix line and the Line number must be the same line.
 - The Example must use an input where the buggy code and the fixed code give DIFFERENT results. Avoid inputs where they happen to agree (for n + 2 versus n * 2 do not use 2; for width + height versus width * height do not use 2 and 2). Write the exact value the code returns now and the value expected by the docstring.
 - The Fix is the complete corrected line of code.
 
